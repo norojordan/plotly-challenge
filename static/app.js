@@ -10,10 +10,10 @@ function buildDemoDisplay(sample) {
    
     let metadata = data.metadata;
 
-    let sampleMetaData = metadata.filter((sampleOBJ) => sampleOBJ.id == sample);
+    let filteredMetaData = metadata.filter((sampleOBJ) => sampleOBJ.id == sample);
 
-    if (sampleMetaData.length > 0) {
-      let resultSample = sampleMetaData[0];
+    if (filteredMetaData.length > 0) {
+      let resultSample = filteredMetaData[0];
       let metaDataPanel = d3.select("#sample-metadata");
 
       // Clears out the screen
